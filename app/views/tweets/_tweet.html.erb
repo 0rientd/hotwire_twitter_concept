@@ -1,0 +1,22 @@
+<div id="<%= dom_id tweet %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Body:</strong>
+    <%= tweet.body %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Likes:</strong>
+    <%= tweet.likes %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Retweets:</strong>
+    <%= tweet.retweets %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this tweet", tweet, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this tweet", edit_tweet_path(tweet), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

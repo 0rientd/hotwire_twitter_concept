@@ -1,0 +1,10 @@
+<%= form_with(model: tweet, class: "contents") do |form| %>
+  <div class="mt-8">
+    <%= form.label "Share something", class: 'ml-2 font-normal text-gray-600' %>
+    <%= form.text_area :body, rows: 4, class: "mt-0 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 w-full" %>
+  </div>
+
+  <div class="flex justify-end">
+    <%= form.submit "Tweet", class: "mt-4 mr-2 rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
